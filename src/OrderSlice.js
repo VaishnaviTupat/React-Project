@@ -4,7 +4,7 @@ const generateOrderId = () => {
   return "ORD-" + Math.random().toString(36).substring(2, 10).toUpperCase();
 };
 
-const OrderSlice = createSlice({
+const orderSlice = createSlice({
   name: "orders",
   initialState: [],
   reducers: {
@@ -22,5 +22,5 @@ const OrderSlice = createSlice({
   },
 });
 
-export const { addOrder } = OrderSlice.actions;
-export default OrderSlice.reducer;
+export const { addOrder } = orderSlice.actions;
+export default orderSlice.reducer;

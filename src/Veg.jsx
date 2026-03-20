@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./veg.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./CartSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBowlFood  } from "@fortawesome/free-solid-svg-icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -45,7 +43,7 @@ const vegItems = [
       <div className="veg-page">
 
         <h2 className="veg-title">
-          <FontAwesomeIcon icon={faBowlFood } /> Veg Curry <FontAwesomeIcon icon={faBowlFood } />
+           Veg Curry 
         </h2>
 
         <div className="veg-grid">

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Chocolate.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./CartSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -47,7 +45,7 @@ function Chocolate() {
       <div className="dessert-page">
 
         <h2 className="dessert-title">
-          <FontAwesomeIcon icon={faIceCream} />Sweet Desserts <FontAwesomeIcon icon={faIceCream} />
+         Sweet Desserts 
           </h2>
 
         <div className="dessert-grid">
