@@ -40,7 +40,7 @@ function App() {
   const [openAccount, setOpenAccount] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
-  // ✅ Load user from localStorage
+  // Load user
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
     if (user) setCurrentUser(user);
@@ -49,7 +49,6 @@ function App() {
   const toggleAccount = () => setOpenAccount(!openAccount);
   const closeAccount = () => setOpenAccount(false);
 
-  // ✅ Logout
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
     setCurrentUser(null);
@@ -59,7 +58,6 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* NAVBAR */}
       <nav className="navbar">
 
         <div className="nav-logo">
@@ -113,14 +111,23 @@ function App() {
           <div className="account-dropdown">
 
             <span className="nav-link account-btn" onClick={toggleAccount}>
+              
+
+              {/* ✅ Username */}
+              {currentUser && (
+                <span style={{ marginLeft: "5px", fontWeight: "600", color: "gold" }}>
+                  {currentUser.name}
+                </span>
+              )}
+
+              {/* ✅ Account text always visible */}
               <FontAwesomeIcon icon={faUser}/>
-              {currentUser ? ` ${currentUser.name}` : " Account"}
+              <span style={{ marginLeft: "5px" }}>Account</span>
             </span>
 
             {openAccount && (
               <div className="dropdown-menu">
 
-                {/* Not logged in */}
                 {!currentUser && (
                   <>
                     <NavLink to="/login" onClick={closeAccount}>Login</NavLink>
@@ -128,13 +135,9 @@ function App() {
                   </>
                 )}
 
-                {/* Logged in */}
                 {currentUser && (
                   <>
-                    <NavLink to="/profile" onClick={closeAccount}>Profile</NavLink>
-                    <span className="logout-btn" onClick={handleLogout}>
-                      Logout
-                    </span>
+                    <NavLink to="/profile" className="profile" onClick={closeAccount}>Profile</NavLink>
                   </>
                 )}
 
@@ -147,7 +150,6 @@ function App() {
 
       </nav>
 
-      {/* ROUTES */}
       <div className="page-content">
         <Routes>
           <Route path="/" element={<Home />} />

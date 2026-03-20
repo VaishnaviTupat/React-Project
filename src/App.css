@@ -148,3 +148,39 @@ margin-left:6px;
   color: gold !important;
   font-weight: bold;
 }
+/* Username styling */
+.username {
+  margin-left: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ff4d4d; /* highlight color */
+  text-transform: capitalize;
+}
+
+/* Account text */
+.account-text {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Account button container */
+.account-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.account-btn:hover .username {
+  color: #ff1a1a;
+}
+
+.account-btn:hover .account-text {
+  color: #000;
+}
+.profile{
+  margin-top: 30px;
+}
