@@ -1,4 +1,5 @@
-/* Reset default styles */
+/*==========================*/
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,59 +7,43 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
-  top: 0;
   position: fixed;
+  top: 0;
   width: 100%;
-  padding: 14px 16px;
-  border-radius: 25px;
+  padding: 14px 20px;
+  border-radius: 0 0 20px 20px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: linear-gradient(90deg,rgb(2, 2, 56));
-  box-shadow: none;
+  background: linear-gradient(90deg, rgb(2, 2, 56));
 }
 
-.nav-img{
-  width: 10px;
-  height: 10px;
-  object-fit: contain;
-}
-
+/* LOGO */
 .nav-logo {
   display: flex;
-  align-items: left;
-  gap: 10px;
-  font-size: 10px;
+  align-items: center;
+  font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   letter-spacing: 1px;
   cursor: pointer;
 }
 
-.summary-row{
-display:flex;
-justify-content:space-between;
-margin:2px 0;
-}
-
-hr{
-margin:3px 0;
-border:0.5px solid #ddd;
-}
-
-/* Navigation Links */
+/* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Individual Link Style */
+/* NAV LINK */
 .nav-link {
   color: #fff;
-  text-decoration:none;
+  text-decoration: none;
   font-size: 14px;
   position: relative;
   transition: 0.3s;
@@ -69,12 +54,13 @@ border:0.5px solid #ddd;
   text-shadow: 0 0 5px gold;
 }
 
-/* Active link highlight */
+/* ACTIVE LINK */
 .nav-link.active {
-  color: gold;
+  color: gold !important;
   font-weight: bold;
 }
 
+/* UNDERLINE EFFECT */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -91,96 +77,101 @@ border:0.5px solid #ddd;
   width: 100%;
 }
 
-/* Page Content */
-.page-content {
-  margin-top: 60px; /* leave space for navbar */
-  min-height: 100vh;
-  background-color: #f9f9f9;
+/* CART COUNT */
+.count {
+  background: white;
+  color: rgb(2, 2, 58);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 20px;
+  margin-left: 6px;
 }
 
-.count{
-background: white;
-color: rgb(2, 2, 58);
-font-size:13px;
-font-weight:600;
-padding:3px 6px;
-border-radius:20px;
-margin-left:6px;
-}
-.count:hover{
+.count:hover {
   background: gold;
 }
 
-/* DROPDOWN CONTAINER */
-.account-dropdown{
-  position: relative;
-  display: inline-block;
-}
-
-/* DROPDOWN MENU */
-.dropdown-menu{
-  position: absolute;
-  top: 35px;
-  right: 0;
-  background-color: #021234; /* dark navy blue */
-  width: 140px;
-  border-radius: 12px;
-  padding: 5px 0;
-}
-
-/* DROPDOWN LINKS */
-.dropdown-menu a{
-  display: block;
-  color: white;
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/* HOVER EFFECT FOR FULL BOX */
-.dropdown-menu a:hover{
-  background-color: gold;
-  color: #020c25;
-  border-radius: 12px;
-  text-decoration: underline;
-}
-.nav-link.active {
-  color: gold !important;
-  font-weight: bold;
-}
-/* Username styling */
-.username {
-  margin-left: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #ff4d4d; /* highlight color */
-  text-transform: capitalize;
-}
-
-/* Account text */
-.account-text {
-  margin-left: 5px;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Account button container */
-.account-btn {
+/* RIGHT SECTION */
+.nav-right {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 10px;
+}
+
+/* USER SECTION */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* USER ICON */
+.user-icon {
+  color: white;
+  font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-/* Hover effect */
-.account-btn:hover .username {
-  color: #ff1a1a;
+.user-icon:hover {
+  color: gold;
 }
 
-.account-btn:hover .account-text {
-  color: #000;
+/* USERNAME */
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  color: gold;
+  text-transform: capitalize;
 }
-.profile{
-  margin-top: 30px;
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: gold;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
+
+.login-btn:hover {
+  background: orange;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: gold;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: orange;
+}
+
+/* PAGE CONTENT */
+.page-content {
+  margin-top: 70px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* EXTRA */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+
+hr {
+  margin: 3px 0;
+  border: 0.5px solid #ddd;
+}
+

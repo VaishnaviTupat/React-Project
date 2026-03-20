@@ -58,97 +58,65 @@ function App() {
   return (
     <BrowserRouter>
 
-      <nav className="navbar">
+   <nav className="navbar">
 
-        <div className="nav-logo">
-          <h1>SwaVish</h1>
-        </div>
+  {/* LOGO */}
+  <div className="nav-logo">
+    <h1>SwaVish</h1>
+  </div>
 
-        <div className="nav-links">
+  {/* LINKS */}
+  <div className="nav-links">
 
-          <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faHouse}/> Home
-          </NavLink>
+    <NavLink to="/" className="nav-link"><FontAwesomeIcon icon={faHouse}/> Home</NavLink>
+    <NavLink to="/veg" className="nav-link"><FontAwesomeIcon icon={faLeaf}/> Veg</NavLink>
+    <NavLink to="/nonveg" className="nav-link"><FontAwesomeIcon icon={faDrumstickBite}/> NonVeg</NavLink>
+    <NavLink to="/snack" className="nav-link"><FontAwesomeIcon icon={faBurger}/> Starters</NavLink>
+    <NavLink to="/soup" className="nav-link"><FontAwesomeIcon icon={faMugHot}/> Soup</NavLink>
+    <NavLink to="/dessert" className="nav-link"><FontAwesomeIcon icon={faCakeCandles}/> Dessert</NavLink>
 
-          <NavLink to="/veg" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faLeaf}/> Veg
-          </NavLink>
+    <NavLink to="/cart" className="nav-link">
+      <FontAwesomeIcon icon={faCartShopping}/> Cart
+      <span className="count">{totalItem}</span>
+    </NavLink>
 
-          <NavLink to="/nonveg" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faDrumstickBite}/> NonVeg
-          </NavLink>
+    <NavLink to="/order" className="nav-link"><FontAwesomeIcon icon={faTruck}/> Order</NavLink>
+    <NavLink to="/aboutus" className="nav-link"><FontAwesomeIcon icon={faCircleInfo}/> AboutUs</NavLink>
+    <NavLink to="/contactus" className="nav-link"><FontAwesomeIcon icon={faPhone}/> ContactUs</NavLink>
 
-          <NavLink to="/snack" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faBurger}/> Starters
-          </NavLink>
+  </div>
 
-          <NavLink to="/soup" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faMugHot}/> Soup
-          </NavLink>
+  {/* RIGHT SIDE USER SECTION */}
+  <div className="nav-right">
 
-          <NavLink to="/dessert" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faCakeCandles}/> Dessert
-          </NavLink>
+    {!currentUser ? (
+      <NavLink to="/login" className="login-btn">
+        Login
+      </NavLink>
+    ) : (
+      <div className="user-section">
 
-          <NavLink to="/cart" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faCartShopping}/> Cart
-            <span className="count">{totalItem}</span>
-          </NavLink>
+        {/* USER ICON → PROFILE */}
+        <NavLink to="/profile" className="user-icon">
+          <FontAwesomeIcon icon={faUser}/>
+        </NavLink>
 
-          <NavLink to="/order" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faTruck}/> Order
-          </NavLink>
+        {/* USERNAME */}
+        <span className="username">
+          {currentUser.name}
+        </span>
 
-          <NavLink to="/aboutus" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faCircleInfo}/> AboutUs
-          </NavLink>
+        {/* LOGOUT */}
+        <button onClick={handleLogout} className="logout-btn">
+          Logout
+        </button>
 
-          <NavLink to="/contactus" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeAccount}>
-            <FontAwesomeIcon icon={faPhone}/> ContactUs
-          </NavLink>
+      </div>
+    )}
 
-          {/* ACCOUNT DROPDOWN */}
-          <div className="account-dropdown">
+  </div>
 
-            <span className="nav-link account-btn" onClick={toggleAccount}>
-              
-
-              {/* ✅ Username */}
-              {currentUser && (
-                <span style={{ marginLeft: "5px", fontWeight: "600", color: "gold" }}>
-                  {currentUser.name}
-                </span>
-              )}
-
-              {/* ✅ Account text always visible */}
-              <FontAwesomeIcon icon={faUser}/>
-              <span style={{ marginLeft: "5px" }}>Account</span>
-            </span>
-
-            {openAccount && (
-              <div className="dropdown-menu">
-
-                {!currentUser && (
-                  <>
-                    <NavLink to="/login" onClick={closeAccount}>Login</NavLink>
-                    <NavLink to="/register" onClick={closeAccount}>Register</NavLink>
-                  </>
-                )}
-
-                {currentUser && (
-                  <>
-                    <NavLink to="/profile" className="profile" onClick={closeAccount}>Profile</NavLink>
-                  </>
-                )}
-
-              </div>
-            )}
-
-          </div>
-
-        </div>
-
-      </nav>
+</nav>
 
       <div className="page-content">
         <Routes>

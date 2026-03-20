@@ -11,7 +11,7 @@ padding: 20px;
 /* ================= HERO ================= */
 .hero {
 position: relative;
-height: 500px;
+height: 600px;
 border-radius: 25px;
 overflow: hidden;
 background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover;
