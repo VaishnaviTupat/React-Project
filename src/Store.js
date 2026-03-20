@@ -4,7 +4,7 @@ import couponReducer from "./couponSlice";
 import orderReducer from "./orderSlice";
 
 
-const store = configureStore({
+const Store = configureStore({
   reducer: {
     cart: cartReducer,
     orders : orderReducer,
@@ -13,4 +13,4 @@ const store = configureStore({
   },
 });
 
-export default store;
+export default Store;
