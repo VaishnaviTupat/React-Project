@@ -4,7 +4,7 @@ import { clearCart, decrementQty, incrementQty, removeCart } from "./CartSlice";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 import { resetCoupon } from "./couponSlice";
-import { addOrder } from "./orderSlice";
+import { addOrder } from "./OrderSlice";
 import { toast } from "react-toastify";
 
 function Cart() {

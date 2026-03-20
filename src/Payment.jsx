@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { applyCoupon } from "./couponSlice";
-import { addOrder } from "./orderSlice";
+import { addOrder } from "./OrderSlice";
 import { QRCode } from "react-qr-code";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
