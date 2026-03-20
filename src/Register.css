@@ -1,0 +1,74 @@
+/* REGISTER PAGE */
+.register-page{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* FORM CARD */
+.register-form{
+width:350px;
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+display:flex;
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+/* TITLE */
+.register-form h3{
+margin-bottom:10px;
+font-size:24px;
+color:#333;
+}
+
+/* INPUT */
+.register-form input{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+outline:none;
+transition:0.3s;
+}
+
+.register-form input:focus{
+border-color:#ff7e5f;
+box-shadow:0 0 5px rgba(255,126,95,0.4);
+}
+
+/* BUTTON */
+.register-form button{
+padding:12px;
+border:none;
+border-radius:25px;
+background:gold;
+color:black;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.register-form button:hover{
+background:orange;
+}
+
+/* LOGIN TEXT */
+.register-form p{
+font-size:14px;
+color:#555;
+}
+
+.register-form span{
+color:#ff5a3c;
+cursor:pointer;
+font-weight:bold;
+}
+
+.register-form span:hover{
+text-decoration:underline;
+}

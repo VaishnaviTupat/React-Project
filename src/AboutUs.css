@@ -1,0 +1,55 @@
+/* Main Container */
+.about-container {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e9f5ff);
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header Section */
+.about-header h1 {
+  font-size: 42px;
+  color: #0072ff;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Cards Section */
+.about-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.about-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+}
+
+/* Card Hover Effect */
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+  color: #0072ff;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}

@@ -1,0 +1,150 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 25px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  z-index: 1000;
+  background: linear-gradient(90deg,rgb(2, 2, 56));
+  box-shadow: none;
+}
+
+.nav-img{
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.summary-row{
+display:flex;
+justify-content:space-between;
+margin:2px 0;
+}
+
+hr{
+margin:3px 0;
+border:0.5px solid #ddd;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual Link Style */
+.nav-link {
+  color: #fff;
+  text-decoration:none;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+
+/* Active link highlight */
+.nav-link.active {
+  color: gold;
+  font-weight: bold;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: gold;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Page Content */
+.page-content {
+  margin-top: 60px; /* leave space for navbar */
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.count{
+background: white;
+color: rgb(2, 2, 58);
+font-size:13px;
+font-weight:600;
+padding:3px 6px;
+border-radius:20px;
+margin-left:6px;
+}
+.count:hover{
+  background: gold;
+}
+
+/* DROPDOWN CONTAINER */
+.account-dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu{
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #021234; /* dark navy blue */
+  width: 140px;
+  border-radius: 12px;
+  padding: 5px 0;
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu a{
+  display: block;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* HOVER EFFECT FOR FULL BOX */
+.dropdown-menu a:hover{
+  background-color: gold;
+  color: #020c25;
+  border-radius: 12px;
+  text-decoration: underline;
+}
+.nav-link.active {
+  color: gold !important;
+  font-weight: bold;
+}

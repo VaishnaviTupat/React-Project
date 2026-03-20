@@ -1,0 +1,320 @@
+/* PAGE BACKGROUND */
+.payment-page{
+width:100%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PAYMENT CARD */
+.payment-box{
+width:420px;
+background:white;
+margin-top: 30px;
+margin-bottom: 30px;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.summary-title{
+display:flex;
+align-items:center;
+text-align:center;
+margin-bottom:20px;
+gap:8px;
+font-size:22px;
+color:#041031;   /* matches navy theme */
+}
+
+.summary-title svg{
+font-size:20px;
+}
+
+/* ROW STYLE */
+.row{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+padding:6px 0;
+}
+.rowd{
+display:flex;
+color : red;
+justify-content:space-between;
+font-size:14px;
+padding:6px 0;
+}
+
+/* FINAL AMOUNT */
+.final{
+font-weight:bold;
+font-size:18px;
+color:#2c3e50;
+}
+
+/* HR LINE */
+hr{
+border:none;
+height:1px;
+background:#ddd;
+margin:5px 0;
+}
+
+/* DISCOUNT BUTTONS */
+.discount-buttons{
+display:flex;
+justify-items: center;
+gap:10px;
+margin-top:10px;
+}
+
+.discount-buttons button{
+background:rgb(5, 172, 239);
+border:none;
+padding:8px 15px;
+align-items: center;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.discount-buttons button:hover{
+background:#4fc3f7;
+color:rgb(18, 18, 18);
+}
+
+/* COUPON BOX */
+.coupon-box{
+display:flex;
+margin-top:15px;
+gap:10px;
+}
+
+.coupon-box input{
+flex:1;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+outline:none;
+}
+
+.coupon-box button{
+padding:10px 15px;
+border:none;
+background:#28a745;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.coupon-box button:hover{
+background:#218838;
+}
+
+/* COUPON MESSAGE */
+.coupon-msg{
+margin-top:8px;
+font-size:14px;
+color:#555;
+}
+
+/* EMAIL ROW */
+.email-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+font-size:15px;
+}
+
+/* SHOW TOGGLE */
+.show-toggle{
+color:#007bff;
+cursor:pointer;
+text-decoration:underline;
+font-weight:500;
+}
+
+/* EMAIL INPUT */
+.email-input{
+width:100%;
+margin-top:8px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+outline:none;
+}
+
+/* PAYMENT METHOD TITLE */
+.method-title{
+margin-top:20px;
+font-size:18px;
+color:#333;
+}
+
+/* PAYMENT BUTTONS */
+.payment-buttons{
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+}
+
+.payment-buttons button{
+flex:1;
+margin:5px;
+padding:10px;
+border:none;
+border-radius:8px;
+background:#ff7e5f;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.payment-buttons button:hover{
+background:#ff5a3c;
+}
+
+/* PAYMENT SECTION */
+.payment-section{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-top:15px;
+}
+
+/* PAYMENT BUTTONS */
+.payment-section button{
+flex:1;
+padding:10px;
+border:none;
+border-radius:25px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+color:white;
+box-shadow:0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* QR BUTTON */
+.qrcode{
+background:#1e3a8a;   /* royal blue */
+
+}
+
+.qrcode:hover{
+transform:scale(1.05);
+box-shadow:0 5px 12px rgba(0,0,0,0.25);
+}
+
+/* CARD BUTTON */
+.card{
+background:#4f46e5;   /* indigo */
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 5px 12px rgba(0,0,0,0.25);
+}
+
+/* CASH BUTTON */
+.cash{
+background:#0ea5a4;   /* teal */
+}
+
+.cash:hover{
+transform:scale(1.05);
+box-shadow:0 5px 12px rgba(0,0,0,0.25);
+}
+
+/* QR BOX */
+.qr-box{
+margin-top:15px;
+display:flex;
+justify-content:center;
+background:#f9f9f9;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* CARD FORM */
+.card-box{
+margin-top:15px;
+background:#f9f9f9;
+padding:10px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.card-box input{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.card-row{
+display:flex;
+gap:8px;
+}
+
+.card-row input{
+width:165px;   /* reduce size */
+padding:8px;
+}
+
+/* PAY BUTTON */
+.pay-btn{
+margin-top:5px;
+padding:10px;
+border:none;
+border-radius:8px;
+background:#28a745;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.pay-btn:hover{
+background:#1f8a36;
+}
+
+/* CASH BOX */
+.cash-box{
+margin-top:15px;
+background:#fff3cd;
+padding:15px;
+border-radius:10px;
+border:1px solid #ffeeba;
+}
+
+.cash-box h4{
+margin-bottom:5px;
+}
+.checkout{
+display:block;
+margin:20px auto;      /* centers the button */
+padding:12px 28px;
+font-size:16px;
+font-weight:600;
+background:#1e3a8a;    /* dark navy blue (matches your navbar) */
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.checkout:hover{
+background:#162d6a;
+transform:scale(1.05);
+}

@@ -1,0 +1,160 @@
+/* CART PAGE */
+.cart-page{
+width:100%;
+padding:40px 20px;
+font-family: Arial, Helvetica, sans-serif;
+display:flex;
+justify-content:center;
+}
+
+/* CART CONTAINER */
+.cart-container{
+width:70%;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+.cart-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.cart-header h2{
+margin:0;
+}
+
+/* CLEAR CART BUTTON */
+.clear-btn{
+background:rgb(255, 140, 0);
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.clear-btn:hover{
+background:#8e0989;
+}
+
+/* CART CARD */
+.cart-card{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+/* CART IMAGE */
+.cart-img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* CART INFO */
+.cart-info{
+flex:1;
+margin-left:20px;
+}
+
+.cart-info h3{
+margin:0 0 10px 0;
+font-size:18px;
+}
+
+/* QUANTITY BOX */
+.qty-box{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.qty-box button{
+width:30px;
+height:30px;
+border:none;
+background:#eee;
+cursor:pointer;
+border-radius:5px;
+font-size:16px;
+}
+
+.qty-box button:hover{
+background:#ddd;
+}
+
+.qty-box span{
+font-size:16px;
+font-weight:bold;
+}
+
+/* PRICE SECTION */
+.cart-price{
+text-align:right;
+}
+
+.cart-price p{
+margin:0 0 10px 0;
+font-weight:bold;
+}
+
+/* REMOVE BUTTON */
+.remove-btn{
+background:red;
+border:none;
+color:white;
+border-radius: 15px;
+padding:8px 15px;
+cursor:pointer;
+font-size:14px;
+}
+
+.remove-btn:hover{
+background: rgb(231, 64, 64);
+}
+
+/* EMPTY CART */
+.empty-cart{
+text-align:center;
+font-size:18px;
+padding:30px;
+color:#777;
+}
+
+/* FOOTER */
+.cart-footer{
+margin-top:25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* TOTAL */
+.cart-footer h3{
+margin:0;
+}
+
+/* PLACE ORDER BUTTON */
+.place-order{
+background:#28a745;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.place-order:hover{
+background:#218838;
+}

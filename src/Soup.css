@@ -1,0 +1,130 @@
+/* ===== PAGE ===== */
+.soup-page {
+  padding: 40px 60px;
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+/* ===== TITLE ===== */
+.soup-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #050709;
+  margin-bottom: 20px;
+}
+
+/* ===== GRID ===== */
+.soup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.soup-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.soup-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== IMAGE ===== */
+.soup-card img{
+width:100%;
+height:170px;   /* increase image height */
+object-fit:cover;
+border-radius:8px;
+}
+
+/* ===== CARD BODY ===== */
+.soup-card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== NAME ===== */
+.soup-card-body h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===== PRICE ===== */
+.soup-price {
+  color: #e53935;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTON ===== */
+.soup-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffc107;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.soup-btn:hover {
+  background: #e0a800;
+}
+.slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-bottom:40px;
+}
+
+.soup-grid{
+display:grid;
+grid-template-columns:repeat(4, 220px); /* smaller cards */
+gap:18px;
+justify-content:center;
+}
+
+.arrow{
+background:#0f172a;
+color:white;
+border:none;
+font-size:22px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.arrow:hover{
+background:#1e3a8a;
+}
+
+.soup-title{
+text-align:center;
+margin:30px 0;
+font-size:26px;
+font-weight:600;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .soup-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .soup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .soup-grid {
+    grid-template-columns: 1fr;
+  }
+}
