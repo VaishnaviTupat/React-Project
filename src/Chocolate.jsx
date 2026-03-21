@@ -26,7 +26,7 @@ function Chocolate() {
 
   /* PAGINATION */
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -45,7 +45,7 @@ function Chocolate() {
       <div className="dessert-page">
 
         <h2 className="dessert-title">
-         Sweet Desserts 
+        🍨 Sweet Desserts 
           </h2>
 
         <div className="dessert-grid">

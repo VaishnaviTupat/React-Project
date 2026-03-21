@@ -1,62 +1,82 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
+import React from "react";
+import { useForm } from "react-hook-form";
 import "./Register.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-function Register(){
+function Register() {
 
-  const { register, handleSubmit, reset } = useForm();
-  const navigate = useNavigate();
+const { register, handleSubmit, reset } = useForm();
+const navigate = useNavigate();
 
-  let submitLogics = (data) => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    users.push(data); 
+const submitLogics = (data) => {
+const users = JSON.parse(localStorage.getItem("users")) || [];
+users.push(data);
 
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Registration Successful");
-    navigate("/login");
-     reset();   // clear form after submit
-  }
+localStorage.setItem("users", JSON.stringify(users));
+alert("Registration Successful");
+navigate("/login");
+reset();
 
-  return (
-  <div className="register-page">
-    <form className="register-form" onSubmit={handleSubmit(submitLogics)}>
 
-      <h3>Registration Form</h3>
+};
 
-      <input 
-        type="text" 
-        placeholder="Full Name"
-        {...register("name",{required:true})}
-      />
+return ( <div className="register-container">
 
-      <input 
-        type="password" 
-        placeholder="Password"
-        {...register("password",{required:true})}
-      />
 
-      <input 
-        type="email" 
-        placeholder="Email Address"
-        {...register("email",{required:true})}
-      />
+  <div className="register-box">
 
-      <input 
-        type="text" 
-        placeholder="Mobile Number"
-        {...register("mobno",{required:true})}
-      />
+    {/* LEFT PANEL */}
+    <div className="register-left">
+      <h2>Join SwaVish 🍽️</h2>
+      <p>Create your account & enjoy delicious meals 😋</p>
+    </div>
 
-      <button type="submit">Submit</button>
+    {/* RIGHT PANEL */}
+    <div className="register-right">
 
-      <p>
+      <h2>Register</h2>
+      <p className="subtitle">
         Already have an account?{" "}
         <span onClick={() => navigate("/login")}>Login</span>
       </p>
 
-    </form>
+      <form onSubmit={handleSubmit(submitLogics)}>
+
+        <input
+          type="text"
+          placeholder="Full Name"
+          {...register("name", { required: true })}
+        />
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          {...register("email", { required: true })}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          {...register("password", { required: true })}
+        />
+
+        <input
+          type="text"
+          placeholder="Mobile Number"
+          {...register("mobno", { required: true })}
+        />
+
+        <button type="submit">Register</button>
+
+      </form>
+
+    </div>
+
   </div>
+
+</div>
+
+
 );
 }
 

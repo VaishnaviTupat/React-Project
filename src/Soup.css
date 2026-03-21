@@ -1,6 +1,6 @@
 /* ===== PAGE ===== */
 .soup-page {
-  padding: 40px 60px;
+  padding: 20px 40px;
   background: #f3f3f3;
   min-height: 100vh;
 }
@@ -8,10 +8,10 @@
 /* ===== TITLE ===== */
 .soup-title {
   text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #050709;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 35px;
 }
 
 /* ===== GRID ===== */

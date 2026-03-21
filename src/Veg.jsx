@@ -25,7 +25,7 @@ const vegItems = [
 ];
   /* PAGINATION LOGIC */
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -43,7 +43,7 @@ const vegItems = [
       <div className="veg-page">
 
         <h2 className="veg-title">
-           Veg Curry 
+          🥗 Veg Curry 
         </h2>
 
         <div className="veg-grid">

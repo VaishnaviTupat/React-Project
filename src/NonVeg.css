@@ -8,9 +8,9 @@
 /* ===== TITLE ===== */
 .nonveg-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
-  color: #0c0d0d;
+  color: black;
   margin-bottom: 35px;
 }
 .nonveg-title svg{

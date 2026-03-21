@@ -16,19 +16,7 @@ import NotFound from "./NotFound";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faDrumstickBite,
-  faBurger,
-  faMugHot,
-  faCartShopping,
-  faCakeCandles,
-  faTruck,
-  faCircleInfo,
-  faPhone,
-  faUser,
-  faLeaf
-} from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faDrumstickBite, faBurger, faMugHot, faCartShopping, faCakeCandles, faTruck, faCircleInfo, faPhone, faUser, faLeaf} from "@fortawesome/free-solid-svg-icons";
 import Payment from "./Payment";
 import Snack from "./Snack";
 

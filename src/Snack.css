@@ -10,9 +10,9 @@
 /* SECTION TITLE */
 
 .snack-title{
-  font-size:28px;
+  font-size:30px;
   font-weight:600;
-  margin:20px 0;        /* reduced gap */
+  margin:20px;        /* reduced gap */
   text-align:center;    /* center the title */
   color:#333;
 }

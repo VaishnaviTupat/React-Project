@@ -70,7 +70,7 @@ const nonVegSnacks = [
 
         {/* VEG SNACKS */}
 
-        <h2 className="snack-title">🥦 Veg Snacks</h2>
+        <h2 className="snack-title">🍟 Veg Snacks</h2>
 
         <div className="slider">
 
@@ -109,7 +109,7 @@ const nonVegSnacks = [
 
         {/* NON VEG SNACKS */}
 
-        <h2 className="snack-title">🍗 Non-Veg Snacks</h2>
+        <h2 className="snack-title">🍗 NonVeg Snacks</h2>
 
         <div className="slider">
 

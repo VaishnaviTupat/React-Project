@@ -1,140 +1,93 @@
-.body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;   /* optional – ensures no scroll anywhere */
+/* BACKGROUND */
+.login-container {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #e6f4f1;
 }
 
-/* Full screen – no scroll */
-.login-page {
-  height: 89vh;          /* exact screen height */
-  width: 98vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;       /* 🚫 disables scroll */
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  font-family: "Poppins", sans-serif;
+/* MAIN BOX */
+.login-box {
+display: flex;
+width: 750px;
+margin-top: 2px;
+height: 420px;
+background: white;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Card */
-.login-card {
-  width: 300px;
-  background: #ffffff;
-  margin-top: 30px;
-  padding: 32px 30px;     /* controlled padding */
-  border-radius: 14px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+/* LEFT SIDE */
+.login-left {
+flex: 1;
+background: linear-gradient(135deg, #220974, #180257);
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 40px;
 }
 
-/* Heading */
-.login-card h2 {
-  text-align: center;
-  margin-bottom: 12px;
-  color: #222;
-  font-weight: 700;
+.login-left h2 {
+font-size: 26px;
+margin-bottom: 10px;
 }
 
-/* Subtext */
-.login-card .subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 14px;
-  color: #777;
+.login-left p {
+font-size: 14px;
+opacity: 0.9;
 }
 
-/* Form */
-.login-card form {
-  display: flex;
-  flex-direction: column;
+/* RIGHT SIDE */
+.login-right {
+flex: 1;
+padding: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
-/* Inputs */
-.login-card input {
-  height: 39px;
-  margin-bottom: 15px;
-  padding: 0 14px;
-  border-radius: 8px;
-  border: 1px solid #2d2c2c;
-  font-size: 14px;
-  transition: 0.3s ease;
+.login-right h2 {
+margin-bottom: 5px;
 }
 
-.login-card input::placeholder {
-  color: #999;
+.subtitle {
+font-size: 13px;
+margin-bottom: 15px;
 }
 
-.login-card input:focus {
-  outline: none;
-  border-color: #321105;
-  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.15);
+.subtitle span {
+color: #0455f8;
+cursor: pointer;
+font-weight: 600;
 }
 
-/* Button */
-.login-card button {
-  height: 45px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 22px;
-  background: gold;
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
+/* INPUT */
+.login-right input {
+width: 100%;
+padding: 10px;
+margin: 8px 0;
+border: none;
+border-bottom: 1px solid #ccc;
+outline: none;
+font-size: 14px;
 }
 
-.login-card button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(227, 179, 5, 0.35);
+/* BUTTON */
+.login-right button {
+margin-top: 15px;
+padding: 10px;
+border: none;
+background: #020645;
+color: white;
+border-radius: 6px;
+cursor: pointer;
+transition: 0.3s;
+font-size: 14px;
 }
 
-/* Forgot Password */
-.forgot-password {
-  text-align: right;
-  margin: 8px 0 15px;
-  font-size: 13px;
-  color: #ff6b35;
-  cursor: pointer;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* Bottom Text */
-.login-card p {
-  margin-top: 18px;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-}
-
-.login-card p span {
-  color: #ff6b35;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.login-card p span:hover {
-  text-decoration: underline;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 420px) {
-  .login-card {
-    width: 90%;
-    padding: 30px 20px;
-  }
+.login-right button:hover {
+background: #1b05e5;
 }
