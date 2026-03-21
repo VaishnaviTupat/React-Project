@@ -5,6 +5,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background: #e6f4f1;
+margin-top: 40px;           /* same as navbar height */
 }
 
 /* MAIN BOX */
@@ -21,8 +22,8 @@ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 /* LEFT SIDE */
 .register-left {
 flex: 1;
-background: linear-gradient(135deg, #0b0485, #0d0251);
-color: white;
+background: linear-gradient(135deg, #eadb08, gold);
+color: black;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -79,13 +80,13 @@ font-size: 14px;
 margin-top: 15px;
 padding: 10px;
 border: none;
-background: #1a0243;
-color: white;
+background: gold;
+color: black;
 border-radius: 6px;
 cursor: pointer;
 transition: 0.3s;
 }
 
 .register-right button:hover {
-background: #e76f51;
+background: orange;
 }

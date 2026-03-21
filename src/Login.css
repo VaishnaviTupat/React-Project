@@ -3,6 +3,7 @@
 height: 100vh;
 display: flex;
 justify-content: center;
+margin-top: 40px;           /* same as navbar height */
 align-items: center;
 background: #e6f4f1;
 }
@@ -22,8 +23,8 @@ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 /* LEFT SIDE */
 .login-left {
 flex: 1;
-background: linear-gradient(135deg, #220974, #180257);
-color: white;
+background: linear-gradient(135deg, #f2c70a, gold);
+color: black;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -59,7 +60,7 @@ margin-bottom: 15px;
 }
 
 .subtitle span {
-color: #0455f8;
+color: red;
 cursor: pointer;
 font-weight: 600;
 }
@@ -80,8 +81,8 @@ font-size: 14px;
 margin-top: 15px;
 padding: 10px;
 border: none;
-background: #020645;
-color: white;
+background: gold;
+color: black;
 border-radius: 6px;
 cursor: pointer;
 transition: 0.3s;
@@ -89,5 +90,5 @@ font-size: 14px;
 }
 
 .login-right button:hover {
-background: #1b05e5;
+background: orange;
 }
