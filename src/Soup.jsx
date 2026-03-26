@@ -67,7 +67,7 @@ function Soup() {
 
         {/* VEG SOUPS */}
 
-        <h2 className="soup-title">🥦 Veg Soups</h2>
+        <h2 className="soup-title">🍲 Veg Soups</h2>
 
         <div className="slider">
 
