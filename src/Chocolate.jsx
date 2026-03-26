@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "./CartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { faGoogle, faFacebook,faXTwitter, faYoutube, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Chocolate() {
 
@@ -14,7 +16,7 @@ function Chocolate() {
     { id: 2, name: "Vanilla Ice Cream", price: 100, image: "Images/dessert/vanilla.jpg" },
     { id: 3, name: "Strawberry Cake", price: 180, image: "Images/dessert/strawberry.jpg" },
     { id: 4, name: "Caramel Pudding", price: 120, image: "Images/dessert/pudding.jpg" },
-     { id: 5, name: "Rasgulla", price: 70, image: "Images/dessert/Rasgulla.jpg" },
+    { id: 5, name: "Rasgulla", price: 70, image: "Images/dessert/Rasgulla.jpg" },
     { id: 6, name: "Gulab Jamun", price: 80, image: "Images/dessert/Gulab Jamun.jpg" },
     { id: 7, name: "Chocolate Brownie", price: 120, image: "Images/dessert/Chocolate.jpg" },
     { id: 8, name: "Ice Cream Sundae", price: 110, image: "Images/dessert/Ice.jpg" },
@@ -24,16 +26,12 @@ function Chocolate() {
     { id: 12, name: "Chocolate Lava Cake", price: 160, image: "Images/dessert/Cholava.jpg" },
   ];
 
-  /* PAGINATION */
-
   const itemsPerPage = 8;
-
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(dessertItems.length / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;
-
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
   const currentItems = dessertItems.slice(indexOfFirstItem, indexOfLastItem);
@@ -44,22 +42,15 @@ function Chocolate() {
 
       <div className="dessert-page">
 
-        <h2 className="dessert-title">
-        🍨 Sweet Desserts 
-          </h2>
+        <h2 className="dessert-title">🍨 Sweet Desserts</h2>
 
         <div className="dessert-grid">
-
           {currentItems.map((item) => (
-
             <div className="dessert-card" key={item.id}>
-
               <img src={item.image} alt={item.name} />
 
               <div className="dessert-body">
-
                 <h3>{item.name}</h3>
-
                 <p className="dessert-price">₹{item.price}</p>
 
                 <button
@@ -71,20 +62,14 @@ function Chocolate() {
                 >
                   Add To Cart
                 </button>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
 
         {/* PAGINATION */}
-
         <div className="pagination">
 
-          {/* Previous */}
           <button
             disabled={currentPage === 1}
             onClick={() => setCurrentPage(currentPage - 1)}
@@ -92,9 +77,7 @@ function Chocolate() {
             Prev
           </button>
 
-          {/* Page Numbers */}
           {Array.from({ length: totalPages }, (_, index) => (
-
             <button
               key={index}
               className={currentPage === index + 1 ? "active" : ""}
@@ -102,10 +85,8 @@ function Chocolate() {
             >
               {index + 1}
             </button>
-
           ))}
 
-          {/* Next */}
           <button
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage(currentPage + 1)}
@@ -116,8 +97,31 @@ function Chocolate() {
         </div>
 
       </div>
+
+      {/* 🔥 FOOTER */}
+      <footer className="footer">
+        <h2>SwaVish</h2>
+        <p>
+          Our team is made up of professionals dedicated to excellence. <br />
+          We value quality food, fast delivery, and customer satisfaction.
+        </p>
+
+        <div className="footer-icons">
+                 <FontAwesomeIcon icon={faGoogle} />
+                <FontAwesomeIcon icon={faFacebook} />
+                 <FontAwesomeIcon icon={faXTwitter} />
+                 <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faLinkedinIn} />
+               </div>
+
+        <hr />
+
+        <p className="footer-bottom">© 2026 SwaVish's</p>
+        <p>Home | About | Contact | Blog</p>
+      </footer>
     </>
   );
 }
 
 export default Chocolate;
+

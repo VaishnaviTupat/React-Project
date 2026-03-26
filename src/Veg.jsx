@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "./CartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FaFacebook, FaTwitter, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { faGoogle, faFacebook,faXTwitter, faYoutube, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Veg() {
 
@@ -96,11 +97,12 @@ function Veg() {
         </p>
 
         <div className="footer-icons">
-            <FaFacebook />
-            <FaTwitter />
-            <FaYoutube />
-            <FaLinkedin />
-         </div>
+                 <FontAwesomeIcon icon={faGoogle} />
+                <FontAwesomeIcon icon={faFacebook} />
+                 <FontAwesomeIcon icon={faXTwitter} />
+                 <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faLinkedinIn} />
+               </div>
 
         <hr />
 

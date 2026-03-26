@@ -3,12 +3,12 @@ import "./Soup.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./CartSlice";
 import { toast, ToastContainer } from "react-toastify";
+import { faGoogle, faFacebook,faXTwitter, faYoutube, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Soup() {
 
   const dispatch = useDispatch();
-
-  /* VEG SOUP ARRAY */
 
   const vegSoups = [
     { id: 1, name: "Tomato Soup", price: 90, image: "Images/soup/tom.jpg" },
@@ -20,8 +20,6 @@ function Soup() {
     { id: 7, name: "Lemon Coriander Soup", price: 105, image: "Images/soup/lemon.jpg" }
   ];
 
-  /* NON VEG SOUP ARRAY */
-
   const nonVegSoups = [
     { id: 8, name: "Chicken Soup with Piece", price: 130, image: "Images/soup/chi.jpg" },
     { id: 9, name: "Chicken Soup Without Piece", price: 140, image: "Images/soup/cre.jpg" },
@@ -32,51 +30,24 @@ function Soup() {
     { id: 14, name: "Mutton Soup with Piece", price: 120, image: "Images/soup/mutton.jpg" }
   ];
 
-  /* SLIDER STATES */
-
   const [vegIndex, setVegIndex] = useState(0);
   const [nonVegIndex, setNonVegIndex] = useState(0);
 
-  const nextVeg = () => {
-    if (vegIndex + 4 < vegSoups.length) {
-      setVegIndex(vegIndex + 1);
-    }
-  };
-
-  const prevVeg = () => {
-    if (vegIndex > 0) {
-      setVegIndex(vegIndex - 1);
-    }
-  };
-
-  const nextNonVeg = () => {
-    if (nonVegIndex + 4 < nonVegSoups.length) {
-      setNonVegIndex(nonVegIndex + 1);
-    }
-  };
-
-  const prevNonVeg = () => {
-    if (nonVegIndex > 0) {
-      setNonVegIndex(nonVegIndex - 1);
-    }
-  };
-
   return (
     <>
+      <ToastContainer position="top-right" autoClose={2000} />
+
       <div className="soup-page">
 
-        {/* VEG SOUPS */}
-
+        {/* VEG */}
         <h2 className="soup-title">🍲 Veg Soups</h2>
 
         <div className="slider">
-
-          <button className="arrow" onClick={prevVeg}>{"<"}</button>
+          <button className="arrow" onClick={() => setVegIndex(Math.max(vegIndex - 1, 0))}>{"<"}</button>
 
           <div className="soup-grid">
             {vegSoups.slice(vegIndex, vegIndex + 4).map((item) => (
               <div className="soup-card" key={item.id}>
-
                 <img src={item.image} alt={item.name} />
 
                 <div className="soup-card-body">
@@ -92,29 +63,23 @@ function Soup() {
                   >
                     Add To Cart
                   </button>
-
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="arrow" onClick={nextVeg}>{">"}</button>
-
+          <button className="arrow" onClick={() => setVegIndex(vegIndex + 1)}>{">"}</button>
         </div>
 
-
-        {/* NON VEG SOUPS */}
-
+        {/* NON VEG */}
         <h2 className="soup-title">🍗 Non-Veg Soups</h2>
 
         <div className="slider">
-
-          <button className="arrow" onClick={prevNonVeg}>{"<"}</button>
+          <button className="arrow" onClick={() => setNonVegIndex(Math.max(nonVegIndex - 1, 0))}>{"<"}</button>
 
           <div className="soup-grid">
             {nonVegSoups.slice(nonVegIndex, nonVegIndex + 4).map((item) => (
               <div className="soup-card" key={item.id}>
-
                 <img src={item.image} alt={item.name} />
 
                 <div className="soup-card-body">
@@ -130,21 +95,40 @@ function Soup() {
                   >
                     Add To Cart
                   </button>
-
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="arrow" onClick={nextNonVeg}>{">"}</button>
-
+          <button className="arrow" onClick={() => setNonVegIndex(nonVegIndex + 1)}>{">"}</button>
         </div>
 
       </div>
 
-      <ToastContainer position="top-right" autoClose={2000} />
+      {/* 🔥 FOOTER */}
+      <footer className="footer">
+        <h2>SwaVish</h2>
+        <p>
+          Our team is made up of professionals dedicated to excellence. <br />
+          We value quality food, fast delivery, and customer satisfaction.
+        </p>
+
+        <div className="footer-icons">
+                 <FontAwesomeIcon icon={faGoogle} />
+                <FontAwesomeIcon icon={faFacebook} />
+                 <FontAwesomeIcon icon={faXTwitter} />
+                 <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faLinkedinIn} />
+               </div>
+
+        <hr />
+
+        <p className="footer-bottom">© 2026 SwaVish's</p>
+        <p>Home | About | Contact | Blog</p>
+      </footer>
     </>
   );
 }
 
 export default Soup;
+

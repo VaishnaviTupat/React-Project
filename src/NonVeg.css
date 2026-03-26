@@ -106,6 +106,40 @@ color:#c62828;
   background:#ccc;
   cursor:not-allowed;
 }
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer h2 {
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;   /* 🔥 centers horizontally */
+  align-items: center;
+  gap: 15px;                 /* space between icons */
+  margin: 15px 0;
+}
+
+.footer-icons svg {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer-icons svg:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
